@@ -6,22 +6,22 @@
     <members>
         <member name="M:Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantsController.Post(Hahn.ApplicatonProcess.May2020.Domain.Models.ApplicantModel)">
             <summary>
-            Add new Applicant
+                Add new Applicant
             </summary>
-            /// <remarks>
-            Sample request:
-            
+            ///
+            <remarks>
+                Sample request:
                 POST api/Applicants
-               	{
-                   "id": 0,
-                   "name": "suraj ayo",
-                   "familyName": "fehintola",
-                   "address": "11 Popoola Banjoko",
-                   "countryOfOrigin": "Nigeria", 
-                   "eMailAddress": "surifoll@yahoo.com",
-                   "age": 20,
-                   "hired": true
-               	}
+                {
+                "id": 0,
+                "name": "suraj ayo",
+                "familyName": "fehintola",
+                "address": "11 Popoola Banjoko",
+                "countryOfOrigin": "Nigeria",
+                "eMailAddress": "surifoll@yahoo.com",
+                "age": 20,
+                "hired": true
+                }
             </remarks>
             <param name="applicantModel"></param>
             <returns></returns>

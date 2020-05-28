@@ -48,7 +48,6 @@ namespace Hahn.ApplicatonProcess.May2020.Web
             services.AddTransient<IApplicantService, ApplicantService>();
             services.AddTransient<IApplicantRepository, ApplicantRepository>();
             services.AddTransient<IHttpClientWrapper, HttpClientWrapper>();
-            services.AddTransient<IApplicationContext, ApplicationContext>();
             services.AddTransient<IValidator<ApplicantModel>, ApplicantModelValidator>();
             services.AddSwaggerGen(options =>
             {

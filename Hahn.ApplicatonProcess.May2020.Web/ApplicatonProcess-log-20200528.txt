@@ -113,3 +113,48 @@ System.Net.Http.HttpRequestException: A connection attempt failed because the co
 2020-05-28 11:11:07.303 +01:00 [Information] Executed endpoint '"Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantsController.Post (Hahn.ApplicatonProcess.May2020.Web)"'
 2020-05-28 11:11:07.303 +01:00 [Information] HTTP "POST" "/api/Applicants" responded 201 in 22899.6820 ms
 2020-05-28 11:11:07.306 +01:00 [Information] Request finished in 22905.9351ms 201 application/json; charset=utf-8
+2020-05-28 13:10:26.122 +01:00 [Information] Starting host
+2020-05-28 13:10:29.394 +01:00 [Information] User profile is available. Using '"C:\Users\Suraj - Moninow\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-05-28 13:10:30.392 +01:00 [Information] Application started. Press Ctrl+C to shut down.
+2020-05-28 13:10:30.393 +01:00 [Information] Hosting environment: "Development"
+2020-05-28 13:10:30.393 +01:00 [Information] Content root path: "C:\Users\Suraj - Moninow\source\repos\Hahn.ApplicatonProcess.Application\Hahn.ApplicatonProcess.May2020.Web"
+2020-05-28 13:10:30.494 +01:00 [Information] Request starting HTTP/2.0 GET https://localhost:44393/  
+2020-05-28 13:10:30.682 +01:00 [Information] HTTP "GET" "/" responded 404 in 54.1829 ms
+2020-05-28 13:10:30.723 +01:00 [Information] Request finished in 237.0386ms 404 
+2020-05-28 13:10:44.772 +01:00 [Information] Request starting HTTP/2.0 POST https://localhost:44393/api/Applicants application/json 203
+2020-05-28 13:10:44.846 +01:00 [Information] CORS policy execution successful.
+2020-05-28 13:10:44.853 +01:00 [Information] Executing endpoint '"Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantsController.Post (Hahn.ApplicatonProcess.May2020.Web)"'
+2020-05-28 13:10:45.073 +01:00 [Information] Route matched with "{action = \"Post\", controller = \"Applicants\", page = \"\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Post(Hahn.ApplicatonProcess.May2020.Domain.Models.ApplicantModel)" on controller "Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantsController" ("Hahn.ApplicatonProcess.May2020.Web").
+2020-05-28 13:10:48.292 +01:00 [Information] Entity Framework Core "3.1.4" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.InMemory"' with options: "StoreName=Server=(localdb)\mssqllocaldb;Database=ApplicationDb;Trusted_Connection=True;MultipleActiveResultSets=true "
+2020-05-28 13:11:09.514 +01:00 [Information] Starting host
+2020-05-28 13:11:12.748 +01:00 [Information] User profile is available. Using '"C:\Users\Suraj - Moninow\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-05-28 13:11:13.550 +01:00 [Information] Application started. Press Ctrl+C to shut down.
+2020-05-28 13:11:13.564 +01:00 [Information] Hosting environment: "Development"
+2020-05-28 13:11:13.564 +01:00 [Information] Content root path: "C:\Users\Suraj - Moninow\source\repos\Hahn.ApplicatonProcess.Application\Hahn.ApplicatonProcess.May2020.Web"
+2020-05-28 13:11:13.666 +01:00 [Information] Request starting HTTP/2.0 GET https://localhost:44393/  
+2020-05-28 13:11:13.835 +01:00 [Information] HTTP "GET" "/" responded 404 in 67.8775 ms
+2020-05-28 13:11:13.942 +01:00 [Information] Request finished in 282.0836ms 404 
+2020-05-28 13:11:19.748 +01:00 [Information] Request starting HTTP/2.0 POST https://localhost:44393/api/Applicants application/json 203
+2020-05-28 13:11:19.843 +01:00 [Information] CORS policy execution successful.
+2020-05-28 13:11:19.850 +01:00 [Information] Executing endpoint '"Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantsController.Post (Hahn.ApplicatonProcess.May2020.Web)"'
+2020-05-28 13:11:20.067 +01:00 [Information] Route matched with "{action = \"Post\", controller = \"Applicants\", page = \"\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Post(Hahn.ApplicatonProcess.May2020.Domain.Models.ApplicantModel)" on controller "Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantsController" ("Hahn.ApplicatonProcess.May2020.Web").
+2020-05-28 13:11:24.386 +01:00 [Information] Entity Framework Core "3.1.4" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.InMemory"' with options: "StoreName=Server=(localdb)\mssqllocaldb;Database=ApplicationDb;Trusted_Connection=True;MultipleActiveResultSets=true "
+2020-05-28 13:12:35.884 +01:00 [Information] Starting host
+2020-05-28 13:12:39.549 +01:00 [Information] User profile is available. Using '"C:\Users\Suraj - Moninow\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-05-28 13:12:40.414 +01:00 [Information] Application started. Press Ctrl+C to shut down.
+2020-05-28 13:12:40.428 +01:00 [Information] Hosting environment: "Development"
+2020-05-28 13:12:40.428 +01:00 [Information] Content root path: "C:\Users\Suraj - Moninow\source\repos\Hahn.ApplicatonProcess.Application\Hahn.ApplicatonProcess.May2020.Web"
+2020-05-28 13:12:40.531 +01:00 [Information] Request starting HTTP/2.0 GET https://localhost:44393/  
+2020-05-28 13:12:40.669 +01:00 [Information] HTTP "GET" "/" responded 404 in 40.8332 ms
+2020-05-28 13:12:40.718 +01:00 [Information] Request finished in 196.4117ms 404 
+2020-05-28 13:12:57.267 +01:00 [Information] Request starting HTTP/2.0 POST https://localhost:44393/api/Applicants application/json 203
+2020-05-28 13:12:57.314 +01:00 [Information] CORS policy execution successful.
+2020-05-28 13:12:57.317 +01:00 [Information] Executing endpoint '"Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantsController.Post (Hahn.ApplicatonProcess.May2020.Web)"'
+2020-05-28 13:12:57.424 +01:00 [Information] Route matched with "{action = \"Post\", controller = \"Applicants\", page = \"\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Post(Hahn.ApplicatonProcess.May2020.Domain.Models.ApplicantModel)" on controller "Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantsController" ("Hahn.ApplicatonProcess.May2020.Web").
+2020-05-28 13:13:00.775 +01:00 [Information] Entity Framework Core "3.1.4" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.InMemory"' with options: "StoreName=Server=(localdb)\mssqllocaldb;Database=ApplicationDb;Trusted_Connection=True;MultipleActiveResultSets=true "
+2020-05-28 13:13:01.123 +01:00 [Information] Saved 1 entities to in-memory store.
+2020-05-28 13:13:01.163 +01:00 [Information] Executing ObjectResult, writing value of type '"Hahn.ApplicatonProcess.May2020.Domain.Models.ApplicantModel"'.
+2020-05-28 13:13:01.388 +01:00 [Information] Executed action "Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantsController.Post (Hahn.ApplicatonProcess.May2020.Web)" in 3947.7482ms
+2020-05-28 13:13:01.389 +01:00 [Information] Executed endpoint '"Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantsController.Post (Hahn.ApplicatonProcess.May2020.Web)"'
+2020-05-28 13:13:01.389 +01:00 [Information] HTTP "POST" "/api/Applicants" responded 201 in 4107.0266 ms
+2020-05-28 13:13:01.394 +01:00 [Information] Request finished in 4133.1013ms 201 application/json; charset=utf-8

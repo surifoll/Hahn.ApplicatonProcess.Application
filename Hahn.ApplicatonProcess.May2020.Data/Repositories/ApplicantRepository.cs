@@ -10,9 +10,9 @@ namespace Hahn.ApplicatonProcess.May2020.Data.Repositories
 {
     public class ApplicantRepository: IApplicantRepository
     {
-        private IApplicationContext _context;
+        private ApplicationContext _context;
 
-        public ApplicantRepository(IApplicationContext context)
+        public ApplicantRepository(ApplicationContext context)
         {
             _context = context;
         }
