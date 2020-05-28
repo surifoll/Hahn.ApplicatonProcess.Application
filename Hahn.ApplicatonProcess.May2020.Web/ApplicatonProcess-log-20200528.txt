@@ -1,0 +1,115 @@
+2020-05-28 11:08:09.505 +01:00 [Information] Starting host
+2020-05-28 11:08:13.761 +01:00 [Information] User profile is available. Using '"C:\Users\Suraj - Moninow\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-05-28 11:08:14.591 +01:00 [Information] Application started. Press Ctrl+C to shut down.
+2020-05-28 11:08:14.602 +01:00 [Information] Hosting environment: "Development"
+2020-05-28 11:08:14.603 +01:00 [Information] Content root path: "C:\Users\Suraj - Moninow\source\repos\Hahn.ApplicatonProcess.Application\Hahn.ApplicatonProcess.May2020.Web"
+2020-05-28 11:08:14.682 +01:00 [Information] Request starting HTTP/2.0 GET https://localhost:44393/  
+2020-05-28 11:08:14.823 +01:00 [Information] HTTP "GET" "/" responded 404 in 53.5374 ms
+2020-05-28 11:08:14.871 +01:00 [Information] Request finished in 196.1752ms 404 
+2020-05-28 11:09:12.547 +01:00 [Information] Request starting HTTP/2.0 POST https://localhost:44393/api/Applicants application/json 203
+2020-05-28 11:09:12.586 +01:00 [Information] CORS policy execution successful.
+2020-05-28 11:09:12.588 +01:00 [Information] Executing endpoint '"Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantsController.Post (Hahn.ApplicatonProcess.May2020.Web)"'
+2020-05-28 11:09:12.695 +01:00 [Information] Route matched with "{action = \"Post\", controller = \"Applicants\", page = \"\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Post(Hahn.ApplicatonProcess.May2020.Domain.Models.ApplicantModel)" on controller "Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantsController" ("Hahn.ApplicatonProcess.May2020.Web").
+2020-05-28 11:10:17.408 +01:00 [Information] Executed action "Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantsController.Post (Hahn.ApplicatonProcess.May2020.Web)" in 64703.4954ms
+2020-05-28 11:10:17.411 +01:00 [Information] Executed endpoint '"Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantsController.Post (Hahn.ApplicatonProcess.May2020.Web)"'
+2020-05-28 11:10:17.412 +01:00 [Error] HTTP "POST" "/api/Applicants" responded 500 in 64855.2796 ms
+System.Net.Http.HttpRequestException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+ ---> System.Net.Sockets.SocketException (10060): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at Hahn.ApplicatonProcess.May2020.Domain.Networks.HttpClientWrapper.HttpGetAsync(String url) in C:\Users\Suraj - Moninow\source\repos\Hahn.ApplicatonProcess.Application\Hahn.ApplicatonProcess.May2020.Domain\Networks\HttpClientWrapper.cs:line 18
+   at Hahn.ApplicatonProcess.May2020.Web.Models.ApplicantModelValidator.<.ctor>b__1_7(String country, CancellationToken cancellation) in C:\Users\Suraj - Moninow\source\repos\Hahn.ApplicatonProcess.Application\Hahn.ApplicatonProcess.May2020.Web\Models\ApplicantValidator.cs:line 36
+   at FluentValidation.Validators.AsyncPredicateValidator.IsValid(PropertyValidatorContext context) in /home/jskinner/code/FluentValidation/src/FluentValidation/Validators/AsyncPredicateValidator.cs:line 47
+   at FluentValidation.Validators.PropertyValidator.Validate(PropertyValidatorContext context) in /home/jskinner/code/FluentValidation/src/FluentValidation/Validators/PropertyValidator.cs:line 55
+   at FluentValidation.Internal.PropertyRule.InvokePropertyValidator(ValidationContext context, IPropertyValidator validator, String propertyName) in /home/jskinner/code/FluentValidation/src/FluentValidation/Internal/PropertyRule.cs:line 423
+   at FluentValidation.Internal.PropertyRule.Validate(ValidationContext context)+MoveNext() in /home/jskinner/code/FluentValidation/src/FluentValidation/Internal/PropertyRule.cs:line 282
+   at System.Linq.Enumerable.SelectManySingleSelectorIterator`2.MoveNext()
+   at System.Linq.Enumerable.WhereEnumerableIterator`1.MoveNext()
+   at FluentValidation.AbstractValidator`1.Validate(ValidationContext`1 context) in /home/jskinner/code/FluentValidation/src/FluentValidation/AbstractValidator.cs:line 115
+   at FluentValidation.AbstractValidator`1.FluentValidation.IValidator.Validate(ValidationContext context) in /home/jskinner/code/FluentValidation/src/FluentValidation/AbstractValidator.cs:line 69
+   at FluentValidation.AspNetCore.FluentValidationModelValidator.Validate(ModelValidationContext mvContext) in /home/jskinner/code/FluentValidation/src/FluentValidation.AspNetCore/FluentValidationModelValidatorProvider.cs:line 91
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.ValidateNode()
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.VisitComplexType(IValidationStrategy defaultStrategy)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.Visit(ModelMetadata metadata, String key, Object model)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.Validate(ModelMetadata metadata, String key, Object model, Boolean alwaysValidateAtTopLevel)
+   at FluentValidation.AspNetCore.FluentValidationVisitor.Validate(ModelMetadata metadata, String key, Object model, Boolean alwaysValidateAtTopLevel) in /home/jskinner/code/FluentValidation/src/FluentValidation.AspNetCore/FluentValidationVisitor.cs:line 48
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ObjectModelValidator.Validate(ActionContext actionContext, ValidationStateDictionary validationState, String prefix, Object model, ModelMetadata metadata)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.EnforceBindRequiredAndValidate(ObjectModelValidator baseObjectValidator, ActionContext actionContext, ParameterDescriptor parameter, ModelMetadata metadata, ModelBindingContext modelBindingContext, ModelBindingResult modelBindingResult)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.BindModelAsync(ActionContext actionContext, IModelBinder modelBinder, IValueProvider valueProvider, ParameterDescriptor parameter, ModelMetadata metadata, Object value)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerBinderDelegateProvider.<>c__DisplayClass0_0.<<CreateBinderDelegate>g__Bind|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2020-05-28 11:10:17.612 +01:00 [Error] An unhandled exception has occurred while executing the request.
+System.Net.Http.HttpRequestException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+ ---> System.Net.Sockets.SocketException (10060): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at Hahn.ApplicatonProcess.May2020.Domain.Networks.HttpClientWrapper.HttpGetAsync(String url) in C:\Users\Suraj - Moninow\source\repos\Hahn.ApplicatonProcess.Application\Hahn.ApplicatonProcess.May2020.Domain\Networks\HttpClientWrapper.cs:line 18
+   at Hahn.ApplicatonProcess.May2020.Web.Models.ApplicantModelValidator.<.ctor>b__1_7(String country, CancellationToken cancellation) in C:\Users\Suraj - Moninow\source\repos\Hahn.ApplicatonProcess.Application\Hahn.ApplicatonProcess.May2020.Web\Models\ApplicantValidator.cs:line 36
+   at FluentValidation.Validators.AsyncPredicateValidator.IsValid(PropertyValidatorContext context) in /home/jskinner/code/FluentValidation/src/FluentValidation/Validators/AsyncPredicateValidator.cs:line 47
+   at FluentValidation.Validators.PropertyValidator.Validate(PropertyValidatorContext context) in /home/jskinner/code/FluentValidation/src/FluentValidation/Validators/PropertyValidator.cs:line 55
+   at FluentValidation.Internal.PropertyRule.InvokePropertyValidator(ValidationContext context, IPropertyValidator validator, String propertyName) in /home/jskinner/code/FluentValidation/src/FluentValidation/Internal/PropertyRule.cs:line 423
+   at FluentValidation.Internal.PropertyRule.Validate(ValidationContext context)+MoveNext() in /home/jskinner/code/FluentValidation/src/FluentValidation/Internal/PropertyRule.cs:line 282
+   at System.Linq.Enumerable.SelectManySingleSelectorIterator`2.MoveNext()
+   at System.Linq.Enumerable.WhereEnumerableIterator`1.MoveNext()
+   at FluentValidation.AbstractValidator`1.Validate(ValidationContext`1 context) in /home/jskinner/code/FluentValidation/src/FluentValidation/AbstractValidator.cs:line 115
+   at FluentValidation.AbstractValidator`1.FluentValidation.IValidator.Validate(ValidationContext context) in /home/jskinner/code/FluentValidation/src/FluentValidation/AbstractValidator.cs:line 69
+   at FluentValidation.AspNetCore.FluentValidationModelValidator.Validate(ModelValidationContext mvContext) in /home/jskinner/code/FluentValidation/src/FluentValidation.AspNetCore/FluentValidationModelValidatorProvider.cs:line 91
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.ValidateNode()
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.VisitComplexType(IValidationStrategy defaultStrategy)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.Visit(ModelMetadata metadata, String key, Object model)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.Validate(ModelMetadata metadata, String key, Object model, Boolean alwaysValidateAtTopLevel)
+   at FluentValidation.AspNetCore.FluentValidationVisitor.Validate(ModelMetadata metadata, String key, Object model, Boolean alwaysValidateAtTopLevel) in /home/jskinner/code/FluentValidation/src/FluentValidation.AspNetCore/FluentValidationVisitor.cs:line 48
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ObjectModelValidator.Validate(ActionContext actionContext, ValidationStateDictionary validationState, String prefix, Object model, ModelMetadata metadata)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.EnforceBindRequiredAndValidate(ObjectModelValidator baseObjectValidator, ActionContext actionContext, ParameterDescriptor parameter, ModelMetadata metadata, ModelBindingContext modelBindingContext, ModelBindingResult modelBindingResult)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.BindModelAsync(ActionContext actionContext, IModelBinder modelBinder, IValueProvider valueProvider, ParameterDescriptor parameter, ModelMetadata metadata, Object value)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerBinderDelegateProvider.<>c__DisplayClass0_0.<<CreateBinderDelegate>g__Bind|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-05-28 11:10:17.701 +01:00 [Information] Request finished in 65157.5729ms 500 text/plain
+2020-05-28 11:10:44.401 +01:00 [Information] Request starting HTTP/2.0 POST https://localhost:44393/api/Applicants application/json 203
+2020-05-28 11:10:44.404 +01:00 [Information] CORS policy execution successful.
+2020-05-28 11:10:44.406 +01:00 [Information] Executing endpoint '"Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantsController.Post (Hahn.ApplicatonProcess.May2020.Web)"'
+2020-05-28 11:10:44.408 +01:00 [Information] Route matched with "{action = \"Post\", controller = \"Applicants\", page = \"\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Post(Hahn.ApplicatonProcess.May2020.Domain.Models.ApplicantModel)" on controller "Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantsController" ("Hahn.ApplicatonProcess.May2020.Web").
+2020-05-28 11:11:06.899 +01:00 [Information] Entity Framework Core "3.1.4" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.InMemory"' with options: "StoreName=Server=(localdb)\mssqllocaldb;Database=ApplicationDb;Trusted_Connection=True;MultipleActiveResultSets=true "
+2020-05-28 11:11:07.140 +01:00 [Information] Saved 1 entities to in-memory store.
+2020-05-28 11:11:07.162 +01:00 [Information] Executing ObjectResult, writing value of type '"Hahn.ApplicatonProcess.May2020.Domain.Models.ApplicantModel"'.
+2020-05-28 11:11:07.302 +01:00 [Information] Executed action "Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantsController.Post (Hahn.ApplicatonProcess.May2020.Web)" in 22892.7387ms
+2020-05-28 11:11:07.303 +01:00 [Information] Executed endpoint '"Hahn.ApplicatonProcess.May2020.Web.Controllers.ApplicantsController.Post (Hahn.ApplicatonProcess.May2020.Web)"'
+2020-05-28 11:11:07.303 +01:00 [Information] HTTP "POST" "/api/Applicants" responded 201 in 22899.6820 ms
+2020-05-28 11:11:07.306 +01:00 [Information] Request finished in 22905.9351ms 201 application/json; charset=utf-8
